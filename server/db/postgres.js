@@ -8,6 +8,7 @@ const pool = new Pool({
   host: process.env.DB_HOST,
   port: parseInt(process.env.DB_PORT) || 5432,
   database: process.env.DB_NAME
-});
 
+});
+console.log("password", process.env.DB_PASS);
 module.exports = pool;

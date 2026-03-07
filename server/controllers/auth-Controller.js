@@ -9,6 +9,7 @@ const getAssignments = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
 const getResult = async (req, res) => {
   const { query } = req.body;
 

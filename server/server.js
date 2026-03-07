@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const assignmentsRouter = require("./routes/assignments")
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes

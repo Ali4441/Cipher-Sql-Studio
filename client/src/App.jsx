@@ -1,11 +1,12 @@
 import './App.css'
+import AssignmentsCard from './componets/AssignmentsCard/AssignmentsCard'
 
 function App() {
 
 
   return (
     <>
-      <h1>hello</h1>
+      <AssignmentsCard />
     </>
   )
 }
