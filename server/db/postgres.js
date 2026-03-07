@@ -1,13 +1,13 @@
-require('dotenv').config()
-const dbHost = process.env.DB_HOST;
+require('dotenv').config();
 const { Pool } = require("pg");
 
-const Pool = new Pool({
-  user: "postgres",
-  password: dbHost,
+
+const pool = new Pool({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
   host: process.env.DB_HOST,
-  port: 5432,
-  database: "ciphersqlstudio"
+  port: parseInt(process.env.DB_PORT) || 5432,
+  database: process.env.DB_NAME
 });
 
-module.exports = Pool;
+module.exports = pool;

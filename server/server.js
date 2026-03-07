@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
-const assignmentsRouter = require("./routes/assignments");
+const assignmentsRouter = require("./routes/assignments")
 
-app.use(express.json()); // JSON parsing middleware
+app.use(express.json());
 
 // Routes
 app.use("/api", assignmentsRouter);

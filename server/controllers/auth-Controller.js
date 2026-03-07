@@ -1,8 +1,8 @@
-const pool = require("../db/postgres")
+const Pool = require("../db/postgres")
 
 const getAssignments = async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM assignments");
+    const result = await Pool.query("SELECT * FROM assignments");
     res.json(result.rows);
   } catch (err) {
     console.error(err.message);
@@ -13,7 +13,7 @@ const getResult = async (req, res) => {
   const { query } = req.body;
 
   try {
-    const result = await pool.query(query);
+    const result = await Pool.query(query);
     res.json(result.rows);
   } catch (err) {
     console.error(err.message);
