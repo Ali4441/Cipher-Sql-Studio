@@ -5,10 +5,7 @@ const app = express();
 const assignmentsRouter = require("./routes/assignments");
 
 // Middleware
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://cipher-sql-studio-beta.vercel.app"
-];
+const allowedOrigins = ["http://localhost:5173"];
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin) return callback(null, true); // Postman etc.
