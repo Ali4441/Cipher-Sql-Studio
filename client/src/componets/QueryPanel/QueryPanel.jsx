@@ -1,28 +1,20 @@
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
 import "./QueryPanel.scss";
+import axios from "axios";
 
 const QueryPanel = ({ setResults, setLoading, setError }) => {
-
   const [query, setQuery] = useState("SELECT * FROM employees;");
 
   const runQuery = async () => {
-
     setLoading(true);
     setError(null);
 
     try {
 
-      const res = await fetch("http://localhost:5000/api/query", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ query })
-      });
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/query`, { query });
 
-
-      const data = await res.json();
+      const data = res.data;
 
       if (data.error) {
         setError(data.error);
@@ -32,9 +24,8 @@ const QueryPanel = ({ setResults, setLoading, setError }) => {
       }
     } catch (err) {
 
-      setError("Server error", err);
+      setError(err.response?.data?.error || "Server error");
       setResults([]);
-
     }
 
     setLoading(false);
@@ -42,10 +33,7 @@ const QueryPanel = ({ setResults, setLoading, setError }) => {
 
   return (
     <div className="query-panel">
-
-      <div className="query-header">
-        SQL Editor
-      </div>
+      <div className="query-header">SQL Editor</div>
 
       <Editor
         height="250px"
@@ -60,7 +48,6 @@ const QueryPanel = ({ setResults, setLoading, setError }) => {
           Run Query
         </button>
       </div>
-
     </div>
   );
 };
