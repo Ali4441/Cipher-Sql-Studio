@@ -11,7 +11,7 @@ const AssignmentList = () => {
   const [assignments, setAssignments] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://cipher-sql-studio-6s18.onrender.com/api/assignments`)
+      .get(`${import.meta.env.VITE_API_URL}/api/assignments`)
       .then((res) => {
         setAssignments(res.data);
       })
@@ -19,7 +19,7 @@ const AssignmentList = () => {
         console.log(err);
       });
   }, []);
-
+  console.log(assignments);
   return (
     <>
 

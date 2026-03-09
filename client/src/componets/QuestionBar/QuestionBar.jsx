@@ -13,7 +13,7 @@ const QuestionBar = () => {
   useEffect(() => {
     const getAssignment = async () => {
       try {
-        const res = await axios.get(`https://cipher-sql-studio-6s18.onrender.com/api/assignments/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/assignments/${id}`);
 
         setAssignment(res.data);
       } catch (error) {
