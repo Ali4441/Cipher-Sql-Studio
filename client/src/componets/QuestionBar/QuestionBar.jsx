@@ -7,14 +7,14 @@ const QuestionBar = () => {
 
 
   const { id } = useParams();
-  console.log(id);
+
   const [assignment, setAssignment] = useState(null);
 
   useEffect(() => {
     const getAssignment = async () => {
       try {
         const res = await axios.get(`http://localhost:5000/api/assignments/${id}`);
-        console.log(res);
+
         setAssignment(res.data);
       } catch (error) {
         console.error(error);

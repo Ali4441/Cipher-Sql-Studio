@@ -1,57 +1,57 @@
-    :root {
-      --bg-void: #050608;
-      --bg-deep: #080a0f;
-      --bg-surface: #0c0f18;
-      --bg-card: #101520;
-      --bg-elevated: #151c2a;
-      --bg-hover: #1a2235;
+:root {
+  --bg-void: #f5f7fb;
+  --bg-deep: #eef2f7;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-hover: #f1f5f9;
 
-      --border: #1e2a3d;
-      --border-bright: #2a3a52;
+  --border: #e5e7eb;
+  --border-bright: #d1d5db;
 
-      --cyan: #00e5ff;
-      --green: #00ffaa;
-      --amber: #ffcc00;
-      --red: #ff3d5a;
-      --purple: #bf6bff;
-      --blue: #4d9fff;
+  --cyan: #06b6d4;
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --purple: #8b5cf6;
+  --blue: #3b82f6;
 
-      --text-1: #edf2ff;
-      --text-2: #7a8ba8;
-      --text-3: #3d4f68;
-      --text-code: #6fc8ff;
+  --text-1: #111827;
+  --text-2: #4b5563;
+  --text-3: #9ca3af;
+  --text-code: #2563eb;
 
-      --easy: #22dd88;
-      --medium: #ffaa00;
-      --hard: #ff4466;
+  --easy: #22c55e;
+  --medium: #f59e0b;
+  --hard: #ef4444;
 
-      --font-display: 'Syne', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-      --r-sm: 6px;
-      --r-md: 10px;
-      --r-lg: 16px;
-      --r-xl: 20px;
-    }
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+}
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-    }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
 
-    body {
-      background: var(--bg-void);
-      color: var(--text-1);
-      font-family: var(--font-mono);
-      line-height: 1.6;
-      overflow-x: hidden;
-      cursor: default;
-    }
+body {
+  background: var(--bg-void);
+  color: var(--text-1);
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: default;
+}

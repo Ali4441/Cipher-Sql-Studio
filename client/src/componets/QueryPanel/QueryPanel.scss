@@ -1,0 +1,32 @@
+.query-panel {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.query-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid #1e293b;
+  font-weight: 600;
+}
+
+.query-actions {
+  padding: 10px;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.run-btn {
+  background: #7c3aed;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.run-btn:hover {
+  background: #6d28d9;
+}

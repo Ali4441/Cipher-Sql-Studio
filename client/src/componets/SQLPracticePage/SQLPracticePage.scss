@@ -1,0 +1,30 @@
+/* MOBILE DEFAULT */
+
+.sql-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px;
+}
+
+/* TABLET */
+
+@media (min-width: 641px) {
+
+  .sql-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+  }
+
+}
+
+/* LAPTOP */
+
+@media (min-width: 1024px) {
+
+  .sql-layout {
+    gap: 30px;
+  }
+
+}

@@ -1,0 +1,18 @@
+.result-panel {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 5px;
+  overflow: hidden;
+
+}
+
+.panel-content {
+
+  text-align: center;
+  padding: 30px;
+}

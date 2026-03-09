@@ -5,13 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./componets/Navbar/Navbar";
 import AssignmentList from "./pages/Home/AssignmentList";
 import AttemptPage from "./pages/Attempt/AttemptPage";
-import Switcher from './componets/switcher/Switcher'
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <div>
-        <Switcher />
+
 
         <Navbar status='connected' Navigate='Sing in' />
         <AssignmentList />
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     path: "/Attempt/:id",
     element: (
       <div>
-        <Switcher />
+
 
         <Navbar status='connected' Navigate='Assignments' />
         <AttemptPage />
