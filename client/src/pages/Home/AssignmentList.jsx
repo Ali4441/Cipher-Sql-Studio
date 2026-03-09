@@ -11,7 +11,7 @@ const AssignmentList = () => {
   const [assignments, setAssignments] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/assignments`)
+      .get(`https://cipher-sql-studio-6s18.onrender.com/api/assignments`)
       .then((res) => {
         setAssignments(res.data);
       })
